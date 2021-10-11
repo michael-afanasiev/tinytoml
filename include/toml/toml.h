@@ -1342,7 +1342,7 @@ inline void Value::write(std::ostream* os, const std::string& keyPrefix, int ind
         (*os) << int_;
         break;
     case DOUBLE_TYPE: {
-        (*os) << std::fixed << std::showpoint << double_;
+        (*os) << std::setprecision(15) << std::scientific << std::showpoint << double_;
         break;
     }
     case STRING_TYPE:
